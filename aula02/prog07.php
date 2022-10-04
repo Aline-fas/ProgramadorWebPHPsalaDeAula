@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Senac - Curso de PHP</title>
     <link rel="stylesheet" href="../css/style.css">
+    <title>Senac - Curso de PHP</title>
 </head>
 <body>
-    <div>
-        <?php
-            $preco = $_GET["preco"];
-            $vista = ($preco * 0.90);
-            $parcelado = ($preco * 1.15);
-            $parcelado2 = ($parcelado / 10);
-        //     $num1 = $_GET["num1"];
-        //     $num2 = $_GET["num2"];
-        
-        // $total = ($num1 + $num2);
+<div>
+    <p>
+        1) Escreva um programa que leia 
+        o preço de um produto.
 
-            echo "O preço do produto é de: $preco  reais";
-            echo "<br>O preço dele comprado a vista será de: $vista reais. ";
-            echo "<br>O preço do produto parcelado sera de: $parcelado reais.";
-            echo "<br> Parcela a partir de: 10x $parcelado2."
-            // echo "<br>A soma de $num1 - $num2 = ".($num1 - $num2);
+        O programa deverá calcular um desconto 
+        de 10% na compra a vista.
 
-        ?>
-    </div>
+        O programa deverá calcular um acrescimo 
+        de 15% na compra parcelada.
+
+        O programa deverá calcular o valor
+        da parcela em até 10 vezes.
+
+        O programa deverá imprimir todos
+        os valores calculados.
+
+        O programa deverá calcular o valor a ser pago.
+    </p>
+    <hr/>
+    <h2 style="text-align: center">Informações dos Produtos</h2>
+    <fieldset>
+        <legend>Dados do Produto</legend>
+        <form action="prog07r.php" method="get">
+            Valor:<br/>
+            <input type="text" name="valor" placeholder="Digite o Valor do Produto"/>
+            <br/>
+            Quantidade:<br/>
+            <input type="number" name="qtd" min="1" placeholder="Digite a Quantidade"/>
+            <br/>
+            <input type="submit" value="Enviar"/>
+        </form>
+    </fieldset>
+</div>
 </body>
 </html>
