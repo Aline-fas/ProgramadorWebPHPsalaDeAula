@@ -10,14 +10,14 @@
 <body>
     <div>
         <p>
-        Escreva um programa  que leia um número.
+            Escreva um programa  que leia um número.
             O programa deverá verificar se o
             mesmo é positivo ou negativo. 
             Se o número for positivo, o programa deverá verificar se o numero 
             é maior que 10, casos seja, imprimir válido.
         </p>
         <hr/>
-        <h2 style="text-align: center">positivo, negativo ou neutro.</h2>        
+        <h2 style="text-align: center">positivo ou negativo.</h2>        
         <fieldset>
             <legend>Numero verificado</legend>
             <?php
@@ -27,11 +27,11 @@
             
                 if ($numero > 0) {
                 echo "<h1 style='text-align: center'>Positivo!</h1>";
-                }else if ($numero < 0 ) {
-                    echo "<h1 style='text-align: center'>Negativo!</h1>";
-                    } else {
+                } if ($numero > 10 ) {
+                    echo "<h1 style='text-align: center'>Valido!</h1>";
+                    } if ($numero <1 ) {
                 
-                     echo "<h1 style='text-align: center'>Neutro!</h1>";
+                     echo "<h1 style='text-align: center'>Negativo!</h1>";
                     }
                 
             
@@ -42,7 +42,7 @@
         </fieldset>
         <br>
         <br>
-        <a href="prog04.php">Voltar</a>
+        <a href="prog06.php">Voltar</a>
         
 </div>
 </body>

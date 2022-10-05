@@ -23,7 +23,7 @@
             <legend>verificando numero </legend>
             <form action="prog06r.php" method="get">
                 Valor:<br/>
-                <input type="text" name="numero" placeholder="Digite um número "/>
+                <input type="text" name="n" placeholder="Digite um número "/>
                 <br/>
                 
                 <input type="submit" value="Enviar"/>
