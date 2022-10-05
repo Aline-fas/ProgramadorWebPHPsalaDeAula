@@ -54,7 +54,7 @@ O programa deverá calcular o valor a ser pago.
     </fieldset>
     <br>
     <br>
-	<a href="prog07.php">Voltar</a>
+	<a href="prog01.php">Voltar</a>
     
 </div>
 </body>

@@ -10,28 +10,26 @@
 <body>
     <div>
         <p>
-            1) Escreva um programa que leia 
-            o preço de um produto.
+            Escreva um programa que leia
+            o preço e a quantidade de produtos comprados.
 
-            O programa deverá calcular um desconto 
-            de 10% na compra a vista.
+            O programa deverá calcular um desconto de
+            10% no valor total a ser pago se o
+            valor do produto for maior que 300.
 
-            O programa deverá calcular um acrescimo 
-            de 15% na compra parcelada.
+            O programa deverá calcular um 
+            desconto de 7% no valor total 
+            a ser pago se o número de produtos
+            comprados for maior que 5.
 
-            O programa deverá calcular o valor
-            da parcela em até 10 vezes.
-
-            O programa deverá imprimir todos
-            os valores calculados.
-
-            O programa deverá calcular o valor a ser pago.
+            O programa deverá calcular e imprimir o valor
+            total a ser pago com os possíveis descontos.
         </p>
         <hr/>
-        <h2 style="text-align: center">Informações dos Produtos</h2>
+        <h2 style="text-align: center"> preço e a quantidade</h2>
         <fieldset>
             <legend>Dados do Produto</legend>
-            <form action="prog08r.php" method="get">
+            <form action="prog05r.php" method="get">
                 Valor:<br/>
                 <input type="text" name="valor" placeholder="Digite o Valor do Produto"/>
                 <br/>

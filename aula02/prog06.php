@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Senac - Curso de PHP</title>
     <link rel="stylesheet" href="../css/style.css">
+    <title>Senac - Curso de PHP</title>
 </head>
 <body>
     <div>
         <p>
-            Escreva um programa que leia o nome, a idade e o sexo de uma pessoa. O programa deverá imprimir as informações lidas.
+            Escreva um programa  que leia um número.
+            O programa deverá verificar se o
+            mesmo é positivo ou negativo. 
+            Se o número for positivo, o programa deverá verificar se o numero 
+            é maior que 10, casos seja, imprimir válido.
 
         </p>
-        <h3>Cadastro de Usuário</h3>
-        <!-- action = para onde var /  method é o metodo de envio -->
-        <form action="prog06r.php" method="post">
-            Login: <br>
-            <input type="text" name="login"> <br>
-            Senha: <br>
-            <input type="password" name="senha"> <br>
-            Perfil <br>
-            <select name="perfil" id="">
-                <option value="admin">Administrador</option>
-                <option value="admin">Usuario</option>
-            </select>
-            <br>
-            <br>
-            <input type="submit" value="Salvar">
+        <hr/>
+        <h2 style="text-align: center">positivo ou negativo.</h2>
+        <fieldset>
+            <legend>verificando numero </legend>
+            <form action="prog06r.php" method="get">
+                Valor:<br/>
+                <input type="text" name="numero" placeholder="Digite um número "/>
+                <br/>
+                
+                <input type="submit" value="Enviar"/>
             </form>
+        </fieldset>
     </div>
 </body>
 </html>

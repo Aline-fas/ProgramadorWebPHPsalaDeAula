@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/style.css">    
+    <link rel="stylesheet" href="../css/style.css">
     <title>Senac - Curso de PHP</title>
 </head>
 <body>
     <div>
         <p>
-            2) Estrutura condicional
+            Estrutura condicional
 
             Representa um fluxo alternativo 
             na execução do programa.
@@ -30,27 +30,16 @@
         <h2 style="text-align: center">Informações dos Produtos</h2>
         <fieldset>
             <legend>Dados do Produto</legend>
-        <?php
-            $valor = $_GET["valor"];
-            $qtd = $_GET["qtd"];
-
-            $desconto = 0;
-
-            //Desvio condicional
-        
-            if ($valor > 100) {
-                $desconto = ($valor * 10) /100; // ou $valor*.10;
-            }  
-            echo "Desconto: R$" .number_format ($desconto, 2, ",",".");
-            echo "<br> Valor com desconto: R$ " .number_format ($valor - $desconto, 2, ",",".");
-            
-        ?>
-        <br>
+            <form action="prog02r.php" method="get">
+                Valor:<br/>
+                <input type="text" name="valor" placeholder="Digite o Valor do Produto"/>
+                <br/>
+                Quantidade:<br/>
+                <input type="number" name="qtd" min="1" placeholder="Digite a Quantidade"/>
+                <br/>
+                <input type="submit" value="Enviar"/>
+            </form>
         </fieldset>
-        <br>
-        <br>
-        <a href="prog08.php">Voltar</a>
-        
-</div>
+    </div>
 </body>
 </html>

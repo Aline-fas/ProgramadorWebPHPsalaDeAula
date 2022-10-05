@@ -10,27 +10,15 @@
 <body>
     <div>
         <p>
-        Desvio condicional composto (DCC)
-
-        É quando uma pergunta tem duas ou mais possíveis respostas.
-
-        Escreva um programa que leia um número.
-        O programa deverá verificar se o número
-        é par ou impar.
-
-        10 / 2 = 5; resto = 0;
-
-        % mod --> é um operador que retorna o resto de uma divisão.
-
-        10 % 2 = 0;
-
-        9 % 2 = 1;
+        Escreva um programa  que leia um número.
+        O programa deverá verificar se o
+        mesmo é positivo, negativo ou neutro.
         </p>
         <hr/>
-        <h2 style="text-align: center">Par ou Impar</h2>
+        <h2 style="text-align: center">positivo, negativo ou neutro.</h2>
         <fieldset>
-            <legend>Número Digitado</legend>
-            <form action="prog09r.php" method="get">
+            <legend>verificando numero </legend>
+            <form action="prog04r.php" method="get">
                 Valor:<br/>
                 <input type="text" name="n" placeholder="Digite um número "/>
                 <br/>

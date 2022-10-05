@@ -14,11 +14,11 @@
             $num1 = $_GET["num1"];
             $num2 = $_GET["num2"];
         
-        $total = ($num1 + $num2);
+        // $total = ($num1 + $num2);
 
 
         echo "A soma de " .$num1. " + " .$num2. " = " .($num1 + $num2);
-        echo "<br>A soma de " .$num1. " + " .$num2. " = " .$total;
+        // echo "A soma de " .$num1. " + " .$num2. " = " .$total;
         echo "<br>A soma de $num1 - $num2 = ".($num1 - $num2);
         echo "<br>A soma de $num1 * $num2 = ".($num1 * $num2);
         echo "<br>A soma de $num1 / $num2 = ".($num1 / $num2);
@@ -27,6 +27,8 @@
 
 
         ?>
+    <a href="http://localhost/aula01/"><h3>Voltar</h3></a>
+
     </div>
 </body>
 </html>

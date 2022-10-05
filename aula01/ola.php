@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+<title>Document</title>
 </head>
 <body>
-    
+    <div>
     <?php
 
-    $linguagem = "PHP, HTML e CSS";
-    
-
-    // echo"<h1>Olá mundo. Esse é o meu primeiro programa em " .$linguagem. " </h1> ";
-    
-    // echo"Olá mundo. Esse é o meu primeiro programa em $linguagem "; 
-    
-    // printf("Olá mundo. Esse é o meu primeiro programa em  $linguagem ")
+    echo "<h1>Olá, meu primeiro programa em PHP</h1>"; 
 
     ?>
+    </div>
+     <br/>
+     <a href="http://localhost/aula01/"><h3>Voltar</h3></a>
 </body>
 </html>

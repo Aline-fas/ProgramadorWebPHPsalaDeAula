@@ -27,27 +27,32 @@
         9 % 2 = 1;
         </p>
         <hr/>
-        <h2 style="text-align: center">Par ou Impar</h2>        
+        <h2 style="text-align: center">positivo, negativo ou neutro.</h2>        
         <fieldset>
-            <legend>Dados do Produto</legend>
+            <legend>Numero verificado</legend>
             <?php
                 $numero = $_GET["n"];
-                $resto = $numero % 2;
-
-               
+                
                 //Desvio condicional
             
-                if ($resto == 0) {
-                echo "<h1 style='text-align: center'>Par!</h1>";
-                } else {
-                    echo "<h1 style='text-align: center'>Impar!</h1>";
-                }
+                if ($numero > 0) {
+                echo "<h1 style='text-align: center'>Positivo!</h1>";
+                }else if ($numero < 0 ) {
+                    echo "<h1 style='text-align: center'>Negativo!</h1>";
+                    } else {
+                
+                     echo "<h1 style='text-align: center'>Neutro!</h1>";
+                    }
+                
+            
+                
+                
             ?>
         <br>
         </fieldset>
         <br>
         <br>
-        <a href="prog09.php">Voltar</a>
+        <a href="prog04.php">Voltar</a>
         
 </div>
 </body>
