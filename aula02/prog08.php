@@ -10,18 +10,28 @@
 <body>
     <div>
         <p>
-            Escreva um programa  que leia um número.
-            O programa deverá verificar se o
-            mesmo é positivo ou negativo. 
-            Se o número for positivo, o programa deverá verificar se o número 
-            é maior que 10, casos seja, imprimir válido.
+        Escreva um programa que leia um numero.
+        <br/>
+        O programa deverá verificar se o numero
+        é valido.
+
+        <br/>
+        Operadores condicionais<br/>
+        < menor<br/>
+        > maior<br/>
+        <= menor igual<br/>
+        >= maior igual<br/>
+        <> diferente de <br/>
+        != não igual há<br/>
+        == igual<br/>
+        === idêntico
 
         </p>
         <hr/>
         <h2 style="text-align: center">positivo ou negativo.</h2>
         <fieldset>
             <legend>Verificando número </legend>
-            <form action="prog06r.php" method="get">
+            <form action="prog08r.php" method="get">
                 Valor:<br/>
                 <input type="text" name="n" placeholder="Digite um número "/>
                 <br/>

@@ -38,13 +38,19 @@
             $desconto2 = 0;
 
             if ($valor > 300) {
-                $desconto1 =  (valor * 10) / 100;
+                $desconto1 =  ($valor * 10) / 100;
                 }
             if ($qtd > 5 ) {    
                 $desconto2 = $valor * .07;
                 }
 
             $valor_total_desconto = $total - $desconto1 - $desconto2; 
+
+            echo "Valor do produto R$" . number_format ($valor, 2, "," , "."). ", a quantidade é: " .$qtd;
+            echo "<br> Desconto 1 = R$" . number_format($desconto1, 2, "," , ".");
+            echo "<br> Desconto 2 = R$" . number_format($desconto2, 2, "," , ".");
+            echo "<br> Valor total = R$" . number_format($total, 2, "," , ".");
+            echo "<br> Valor com descontos = R$" . number_format($valor_total_desconto, 2, "," , ".");
                 
         ?>
         <br>

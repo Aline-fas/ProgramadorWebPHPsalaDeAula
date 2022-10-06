@@ -18,12 +18,18 @@
 
         </p>
         <hr/>
-        <h2 style="text-align: center">positivo ou negativo.</h2>
+        <h2 style="text-align: center">Verificando o maior número </h2>
         <fieldset>
-            <legend>Verificando número </legend>
-            <form action="prog06r.php" method="get">
+            <legend>Verificando o maior número </legend>
+            <form action="prog07r.php" method="get">
                 Valor:<br/>
-                <input type="text" name="n" placeholder="Digite um número "/>
+                <input type="text" name="n1" placeholder="Digite um número "/>
+                <br/>
+                Valor:<br/>
+                <input type="text" name="n2" placeholder="Digite um número "/>
+                <br/>
+                Valor:<br/>
+                <input type="text" name="n3" placeholder="Digite um número "/>
                 <br/>
                 
                 <input type="submit" value="Enviar"/>
