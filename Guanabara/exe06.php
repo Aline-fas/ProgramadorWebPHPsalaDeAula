@@ -9,6 +9,8 @@
 </head>
 <body>
     <div>
+    <fieldset>
+            <legend>Verificando preço do produto </legend>
         <?php
             // $produto = $_GET["0"];
             $produto = $_GET["p"];
@@ -18,6 +20,7 @@
             echo "Você ganhou um desconto de 10% e pagará R$ $preco nessa compra."
 
         ?>
+          </fieldset>
     </div>
 </body>
 </html>

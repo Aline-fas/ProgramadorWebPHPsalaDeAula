@@ -26,16 +26,13 @@
                 //Desvio condicional
             
                 if ($numero > 0) {
-                echo "<h1 style='text-align: center'>Positivo!</h1>";
-                } if ($numero > 10 ) {
-                    echo "<h1 style='text-align: center'>Valido!</h1>";
-                    } if ($numero <1 ) {
-                
-                     echo "<h1 style='text-align: center'>Negativo!</h1>";
+                    echo "<h1 style='text-align: center'>Positivo</h1>";
+                     if ($numero > 10 ) {
+                        echo "<h1 style='text-align: center'>Valido</h1>";
+                        } 
+                    } else  {
+                         echo "<h1 style='text-align: center'>Negativo</h1>";
                     }
-                
-            
-                
                 
             ?>
         <br>
