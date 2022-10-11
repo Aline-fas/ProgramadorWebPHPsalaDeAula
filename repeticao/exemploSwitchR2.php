@@ -11,36 +11,35 @@
 </head>
 <body>
     <div>
-        <p style="text-align: center;">
-            Exercitando condições de multiplos casos com switch.
+    <p style="text-align: center;">
+            Exercitando condições de multiplos casos com Switch.
         </p>
-        <p>
-            Escreva um número, de acordo com a sua escolha veja o
-            resultado  da operação aritimética.
+        <p>Escreva um número, de acordo com o valor que representa um dia da semana
+            Escreva se é dia de trabalhar / estudar.
         </p>
         <?php
         $n = $_POST["numero"];
-        $o = $_POST["operacao"];
 
-        switch($o){
-            // case 1:
-            case 'a':
-                $resposta = $n * 2;
+        switch($n){
+            case 1:
+            case 7:
+                $resposta = "Dia de descanço...";
                 break;
-            // case 2:
-            case 'b':
-                $resposta = pow($n, 3);
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                $resposta = "Dia de trabalhar e (ou) estudar.";
                 break;
-            // case 3:
-            case 'c':
-                $resposta = sqrt($n);
-                break;
+            default:
+                $resposta = "Número de dia da semana invalido!";
             }
 
-            echo "O resultado da operação solicitada foi: $resposta";
+            echo $resposta;
         ?>
         <br>
-        <a href="exemploSwitch.html">
+        <a href="exemploSwitch2.html">
         <i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i>
         </a>
     </div>

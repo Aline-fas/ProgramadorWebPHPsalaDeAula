@@ -11,38 +11,25 @@
 </head>
 <body>
     <div>
-        <p style="text-align: center;">
-            Exercitando condições de multiplos casos com switch.
-        </p>
-        <p>
-            Escreva um número, de acordo com a sua escolha veja o
-            resultado  da operação aritimética.
-        </p>
+        <h1>While</h1>
+    <p style="text-align: center;">
+            Criando dinâmicamente caixas textos.
+    </p>
+        
+    <form action="exemploWhile2R.php" method="get">
         <?php
-        $n = $_POST["numero"];
-        $o = $_POST["operacao"];
-
-        switch($o){
-            // case 1:
-            case 'a':
-                $resposta = $n * 2;
-                break;
-            // case 2:
-            case 'b':
-                $resposta = pow($n, 3);
-                break;
-            // case 3:
-            case 'c':
-                $resposta = sqrt($n);
-                break;
-            }
-
-            echo "O resultado da operação solicitada foi: $resposta";
+       $n = 1; 
+        while($n <= 5){
+            echo "<Label for='id$n' class='form-label'>Label $n</Label>
+            <input type='number' class='form-control' name='v$n' id='id$n'>
+            <br>";
+            $n++;
+        }
         ?>
+            <input type="submit" value="Enviar" class="btn btn-primary">
+    </form>
         <br>
-        <a href="exemploSwitch.html">
-        <i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i>
-        </a>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

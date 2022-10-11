@@ -11,36 +11,29 @@
 </head>
 <body>
     <div>
-        <p style="text-align: center;">
-            Exercitando condições de multiplos casos com switch.
-        </p>
-        <p>
-            Escreva um número, de acordo com a sua escolha veja o
-            resultado  da operação aritimética.
-        </p>
+        <h1>While</h1>
+    <p style="text-align: center;">
+    Criando dinâmicamente caixas textos.
+    </p>
         <?php
-        $n = $_POST["numero"];
-        $o = $_POST["operacao"];
-
-        switch($o){
-            // case 1:
-            case 'a':
-                $resposta = $n * 2;
-                break;
-            // case 2:
-            case 'b':
-                $resposta = pow($n, 3);
-                break;
-            // case 3:
-            case 'c':
-                $resposta = sqrt($n);
-                break;
-            }
-
-            echo "O resultado da operação solicitada foi: $resposta";
+        $i = 1;
+        while($i <= 5){
+            $v = "num" . $i; 
+            $url = "v" . $i;
+            $$v = $_GET["$url"];
+            $i++;
+        }
+        // echo "$num1 $num2 $num3 $num4 $num5"; 
+        $i = 1;
+        while($i <=5){
+            $v = "num" . $i;
+            echo "Valor $i: " . $$v ."<br>";
+            $i++;
+        }
+       
         ?>
         <br>
-        <a href="exemploSwitch.html">
+        <a href="exemploWhile2.php">
         <i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i>
         </a>
     </div>

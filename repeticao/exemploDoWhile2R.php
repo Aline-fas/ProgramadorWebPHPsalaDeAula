@@ -11,36 +11,27 @@
 </head>
 <body>
     <div>
-        <p style="text-align: center;">
-            Exercitando condições de multiplos casos com switch.
-        </p>
-        <p>
-            Escreva um número, de acordo com a sua escolha veja o
-            resultado  da operação aritimética.
-        </p>
+    <h1>Do While</h1>
+    <p style="text-align: center;">
+        Escreva um programa que imprima o fatorial de um 
+        número e mostre o valor da operação aritmética.
+    </p>
+        
         <?php
-        $n = $_POST["numero"];
-        $o = $_POST["operacao"];
-
-        switch($o){
-            // case 1:
-            case 'a':
-                $resposta = $n * 2;
-                break;
-            // case 2:
-            case 'b':
-                $resposta = pow($n, 3);
-                break;
-            // case 3:
-            case 'c':
-                $resposta = sqrt($n);
-                break;
-            }
-
-            echo "O resultado da operação solicitada foi: $resposta";
+        $n = $_GET["valor"];
+        echo "<h1>Calculando o Fatorial de $n</h1>";
+        $fat = 1;
+        echo "<h3>$n! = ";
+        do{
+            echo $fat > 1 ? " x " : "";
+            echo $n;
+            $fat = $fat * $n;
+            $n--;
+        }while($n >= 1);
+        echo " = ". $fat . "</h3>";
         ?>
         <br>
-        <a href="exemploSwitch.html">
+        <a href="exemploDoWhile2.html">
         <i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i>
         </a>
     </div>

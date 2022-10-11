@@ -11,38 +11,33 @@
 </head>
 <body>
     <div>
-        <p style="text-align: center;">
-            Exercitando condições de multiplos casos com switch.
-        </p>
-        <p>
-            Escreva um número, de acordo com a sua escolha veja o
-            resultado  da operação aritimética.
-        </p>
+        <h1>While</h1>
+    <p style="text-align: center;">
+            Mostre uma contagem progressiva de 1 até 10.
+    </p>
+        
         <?php
-        $n = $_POST["numero"];
-        $o = $_POST["operacao"];
+        $contador = 1;
+        while($contador <= 10){
+            echo $contador . "<br>";
+            //Formas de Incrementar uma variável:
+            // $contador = $contador + 1;
+            // $contador += 1;
+            // $contador++; //Pós incremento ...
+            ++$contador; //Pré incremento ...
+        }
+        echo "-------------------------------<br>";
+        while($contador >= 1){
+            echo $contador . "<br>";
+            $contador--;
+        }
 
-        switch($o){
-            // case 1:
-            case 'a':
-                $resposta = $n * 2;
-                break;
-            // case 2:
-            case 'b':
-                $resposta = pow($n, 3);
-                break;
-            // case 3:
-            case 'c':
-                $resposta = sqrt($n);
-                break;
-            }
 
-            echo "O resultado da operação solicitada foi: $resposta";
         ?>
         <br>
-        <a href="exemploSwitch.html">
+        <!-- <a href="exemploSwitch2.html">
         <i class="bi bi-reply" style="font-size: 2rem; color: cornflowerblue;"></i>
-        </a>
+        </a> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
