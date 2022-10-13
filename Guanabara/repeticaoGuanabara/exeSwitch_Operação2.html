@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+            Elabore um algoritmo que leia dois valores do usuário e a operação que ele deseja executar (Operações: soma, subtração, divisão, multiplicação). Execute a operação desejada e imprima na tela.
+        </p>
+        <form action="exeSwitch_Operacao2.php" method="post">
+            Primeiro número: <input type="number" name="numero1" placeholder="digite um número" min="0"> <br>
+            Segundo número: <input type="number" name="numero2" placeholder="digite um número" min="0">
+            <br>
+            <br>
+            <fieldset>
+                Operação desejada: <br>
+                <input type="radio" id="soma" name="operacao" value="1" checked>
+                <label for="soma">soma</label>
+                <input type="radio" id="subtração" name="operacao" value="2">
+                <label for="subtração">subtração</label>
+                <input type="radio" id="multiplicação" name="operacao" value="3">
+                <label for="multiplicação">multiplicação</label>
+                <input type="radio" id="divisao" name="operacao" value="4">
+                <label for="divisao">divisao</label>
+            </fieldset>
+            
+            <input type="submit" value="calcular">
+                
+        </form>
+    </div>
+</body>
+</html>

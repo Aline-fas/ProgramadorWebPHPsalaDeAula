@@ -22,12 +22,12 @@
         echo "<h1>Calculando o Fatorial de $n</h1>";
         $fat = 1;
         echo "<h3>$n! = ";
-        do{
+        while($n >= 1){
             echo $fat > 1 ? " x " : "";
             echo $n;
             $fat = $fat * $n;
             $n--;
-        }while($n >= 1);
+        }
         echo " = ". $fat . "</h3>";
         ?>
         <br>
