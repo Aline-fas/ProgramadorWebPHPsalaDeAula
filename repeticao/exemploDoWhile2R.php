@@ -18,17 +18,34 @@
     </p>
         
         <?php
-        $n = $_GET["valor"];
-        echo "<h1>Calculando o Fatorial de $n</h1>";
+
+        $v = $_GET["valor"];
+
+        echo "<h1>Calculando o Fatorial de $v</h1>";
+        $c = $v;
         $fat = 1;
-        echo "<h3>$n! = ";
-        while($n >= 1){
-            echo $fat > 1 ? " x " : "";
-            echo $n;
-            $fat = $fat * $n;
-            $n--;
-        }
-        echo " = ". $fat . "</h3>";
+
+        echo "$v! = $v ";
+        while ($c >1){
+            $fat = $fat * $c;
+            $c--; 
+            echo "x $c ";
+        } 
+        echo "= $fat";
+        echo "<br> $v! = $fat";
+
+
+        // $n = $_GET["valor"];
+        // echo "<h1>Calculando o Fatorial de $n</h1>";
+        // $fat = 1;
+        // echo "<h3>$n! = ";
+        // while($n >= 1){
+        //     echo $fat > 1 ? " x " : "";
+        //     echo $n;
+        //     $fat = $fat * $n;
+        //     $n--;
+        // }
+        // echo " = ". $fat . "</h3>";
         ?>
         <br>
         <a href="exemploDoWhile2.html">
