@@ -10,18 +10,21 @@
 <body>
     <div>
         <?php
-       
-        function soma ($a,$b){
-            return $a + $b;
-            // ou pode fazer da seguinte maneira:
-            // $s = $a + $b;
-            // return $s;
+            function soma ($a,$b){
+                $s = $a + $b;
+                return $s; // o retorno deve ser colocado dentro de uma variável
 
-        }
-        $x = 4;
-        $y = 5;
-        $r = soma($x,$y);
-        echo "a soma entre $x e $y = $r";
+                // ou pode fazer da seguinte maneira:
+                // return $a + $b;
+
+            }
+
+            $x = 3;
+            $y = 4;
+            $resposta = soma ($x,$y);
+
+            echo "A soma entre $x e $y vale $resposta";
+            
         ?>
     </div>
 </body>

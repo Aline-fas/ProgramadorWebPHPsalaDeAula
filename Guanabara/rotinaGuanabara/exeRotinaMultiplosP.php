@@ -8,23 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <?php
-        echo "<h2>Rotinas com Parâmetros Dinâmicos</h2>";
-       
-        function soma (){
-            $p = func_get_args();
-            $t = func_num_args();
-            $s = 0;
-            for ($i=0; $i<$t;$i++){
-                $s += $p[$i];
-            }
-            return $s;
-        }
+    <div> 
+        <pre>
 
-        $r = soma (3,5,2,5,35);
-        echo "A soma dos valores é: ".$r;
-        ?>
+            <?php
+            echo "<h2>Rotinas com Parâmetros Dinâmicos</h2>";
+            
+            function soma(){
+                $p = func_get_args (); //Essa função pega todos os elementos e coloca dentro do vetor
+                $t = func_num_args(); // retorna o numero de elementos dentro do vetor
+                $s = 0;
+                
+                for($i=0; $i<$t; $i++){
+                    $s += $p[$i];
+                }
+                return $s;
+            }
+            
+            $resultado = soma (3,5,2,9);
+            echo " A soma dos valores é $resultado";
+        
+        
+                ?>
+        </pre>
     </div>
 </body>
 </html>
