@@ -10,7 +10,7 @@
 <body>
     <div>
         <?php
-            function soma ($a, $b) {
+            function soma ($a, $b) { //blocos pre programados para testar posteriormente
                 $s = $a + $b;
                 echo "<p> A soma entre $a e $b vale $s </p>";
             }

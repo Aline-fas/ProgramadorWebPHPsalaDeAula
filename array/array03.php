@@ -17,29 +17,34 @@
 
 
         <h1 style="text-align: center;">
-            Arrays.
+            Arrays 03 com FOREACH.
         </h1>
         <hr>
         <br>
         <pre>
         <?php
-            // Tamanho de vetor n - 1; 
-            $c = array(15, 12, 1978, 70, 22);
-            // echo $c[2];
-            print_r($c);
+        //(início, fim, tamanho do passo)
+        //No exemplo esta de 1 em 1
+        // Tamanho de um array é n - 1;
+           $a = range(1, 10, 1);
+           print_r($a);
+           $tamanho = count($a);
+           echo "<br>";
+           echo "Tamanho do Array: $tamanho";
+           echo "<br>";
+           $a[] = 100;
+           echo "Tamanho do Array: " . count($a);
+           echo "<br>";
+           //    for($i=0 ; $i < count($a) ; $i++){
+               //         echo "[$i] => $a[$i] <br>";    
+               //     }
+               //Conhecendoo o FOREACH
+            // foreach($a as $i){
+            foreach($a as $i => $x){
+                // echo "[$valor] => $valor <br>";
+                echo "[$i] => $x <br>";
+            }   
 
-            echo "<br>";
-
-            $a[0] = 10;
-            $a[1] = 15;
-            $a[2] = 13;
-            $a[3] = 22;
-            $a[4] = 14;
-            $a[5] = 16;
-            print_r($a);
-            
-            $a[] = 75;// Coloca um novo elemento no final do array;
-            print_r($a);
         ?>
         </pre>
 

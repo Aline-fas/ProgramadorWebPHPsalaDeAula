@@ -17,29 +17,29 @@
 
 
         <h1 style="text-align: center;">
-            Arrays.
+            Procedimentos, Funções e Métodos.
         </h1>
+        <h4 style="text-align: center;">Testando Funções</h4>
         <hr>
         <br>
         <pre>
         <?php
-            // Tamanho de vetor n - 1; 
-            $c = array(15, 12, 1978, 70, 22);
-            // echo $c[2];
-            print_r($c);
+        
+        include "funcoes.php";
 
-            echo "<br>";
+       escreva_texto();
+       pulaLinha(2);
+       escreva_texto2("Velasco");
+       pulaLinha(-3);
+       hoje();
+       pulaLinha(1);
+       echo "<h4 style='text-align: center;'>-----------------------------</h4>";
+       soma(15, 78);
+       soma2(15, 78, 55, 1, 2);
+       subtracao(20, 8);
+       multiplicacao(7, 3);
+       divisao(15, 0);
 
-            $a[0] = 10;
-            $a[1] = 15;
-            $a[2] = 13;
-            $a[3] = 22;
-            $a[4] = 14;
-            $a[5] = 16;
-            print_r($a);
-            
-            $a[] = 75;// Coloca um novo elemento no final do array;
-            print_r($a);
         ?>
         </pre>
 

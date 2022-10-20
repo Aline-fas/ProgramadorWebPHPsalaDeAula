@@ -13,7 +13,7 @@
             
             <?php
                 $n = array (3,5,7,1);
-                $n[]=4; //adiciona um elemento
+                $n[]=4; //adiciona um elemento no final
                 
                 array_push($n,15); //adiciona um elemento no final do vetor 
                 array_unshift($n,2); //adicionar elemento no inicio do vetor
