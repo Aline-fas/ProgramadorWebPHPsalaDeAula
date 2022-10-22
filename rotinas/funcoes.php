@@ -13,8 +13,8 @@ function escreva_texto(){
 echo "<h4 style='text-align: center;'>Minha primeira função em PHP</h4>";
 }
 
-function escreva_texto2($qualquer_coisa){
-echo "<h4 style='text-align: center;'>$qualquer_coisa</h4>";
+function escreva_texto2($qc){
+echo "<h4 style='text-align: center;'>$qc</h4>";
 }
 
 function hoje(){
@@ -50,7 +50,7 @@ function soma2(){
     $qtd2 = func_num_args();//Retorna um inteiro que representa a quantidade de argumentos;
     $total = 0;
     echo "<h4 style='text-align: center;'>A soma: ";
-    for($i =0; $i <  $qtd1; $i++){
+    for($i = 0; $i <  $qtd1; $i++){
         $total += $valores[$i];// $total = $total + $i 
         echo $valores[$i] . ( $i == $qtd1 -1 ? " = " : " + ") ;
     }
@@ -73,7 +73,7 @@ function multiplicacao($num1, $num2){
 }
 
 function divisao($num1, $num2){
-    if($num2 == 0){
+    if($num2 == 0){ 
         echo "<h4 style='text-align: center;'>Não é  possível dividir por zero...</h4>";
     } else {
         $total = $num1 / $num2;

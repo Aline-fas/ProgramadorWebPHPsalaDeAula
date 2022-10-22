@@ -13,7 +13,7 @@ function escreva_texto3($qualquer_coisa){
  function somaR2(&$num1, &$num2){//Passagem por referência
      $total = $num1 + $num2;
      $num2 = 10;
-    return $total;
+    return $total; 
 }
 
 function soma2R(){

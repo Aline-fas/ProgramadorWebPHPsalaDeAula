@@ -29,7 +29,7 @@
 
        escreva_texto();
        pulaLinha(2);
-       escreva_texto2("Velasco");
+       escreva_texto2("Line");
        pulaLinha(-3);
        hoje();
        pulaLinha(1);
