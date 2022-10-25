@@ -1,0 +1,21 @@
+Dados do Aluno - Cadastro realizado em: 24/102022as21:09:30
+Nome:muli
+CPF:555.555.555-55
+E-mail:muli@gmail.com
+Telefone:11988776655
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022as21:19:36
+Nome:
+CPF:
+E-mail:
+Telefone:
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 24/102022as21:19:49
+Nome:muli
+CPF:555.555.555-55
+E-mail:muli@gmail.com
+Telefone:11988776655
+------------------------------------------
+
