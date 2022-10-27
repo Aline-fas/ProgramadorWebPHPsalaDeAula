@@ -43,7 +43,7 @@
             foreach($a as $i => $x){
                 // echo "[$valor] => $valor <br>";
                 echo "[$i] => $x <br>";
-            }   
+            }    
 
         ?>
         </pre>

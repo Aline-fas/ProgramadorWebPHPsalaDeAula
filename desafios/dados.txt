@@ -19,3 +19,17 @@ E-mail:muli@gmail.com
 Telefone:11988776655
 ------------------------------------------
 
+Dados do Aluno - Cadastro realizado em: 26/102022as19:07:00
+Nome:muli
+CPF:555.555.555-55
+E-mail:muli@gmail.com
+Telefone:11988776655
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 26/102022as19:10:13
+Nome:muli
+CPF:555.555.555-55
+E-mail:muli@gmail.com
+Telefone:11988776655
+------------------------------------------
+

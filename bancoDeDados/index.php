@@ -1,4 +1,39 @@
 <!DOCTYPE html>
+<?php
+    require_once "conexao.php";
+
+    if(isset($_POST["email"]) || isset($_POST["senha"])){
+        if (strlen($_POST["email"])==0){
+            echo "Preencha seu e-mail!";
+        }elseif (strlen($_POST["senha"]==0)){
+            echo "Preencha sua senha!";
+        } else {
+            //real_escape_string() = função que retorna string sem caracteres especiais
+            $email = $conexao-> real_escape_string($_POST["email"]);
+            $senha = $conexao-> real_escape_string($_POST["senha"]);
+
+            $sql_code = " select * from usuario where login = '$email' and senha = '$senha'";
+            $sql_query = $conexao->query($sql_code) or die("Falha na execução do codigo SQL:" . $conexao->error);
+            
+            $qtd = $sql_query->num_rows;
+
+            if ($qtd ==1){
+                $usuario = $sql_query->fetch_assoc();
+
+            if (!isset($_SESSION)){
+                session_start();
+            }
+
+                // $_SESSION['user'] = $usuario;
+                $_SESSION['id'] = $usuario["id"];
+                $_SESSION['nome'] = $usuario["nome"];
+                header("Location:login.php");
+            } else {
+                echo "Falha ao logar! E-mail ou senha incorretos";
+            }
+        }
+    }
+?>
 <html lang="pt-BR">
 
 <head>
@@ -14,21 +49,21 @@
             var msg = "";
             var flag = 0;
 
-            if (f.nome.value ==""){
-                flag = 1;
-                msg = "Preencha o campo Nome!";
-            }
-            if (f.cpf.value ==""){
-                flag = 1;
-                msg = msg + "<br>Preencha o campo CPF!";
-            }
+            // if (f.nome.value ==""){
+            //     flag = 1;
+            //     msg = "Preencha o campo Nome!";
+            // }
+            // if (f.cpf.value ==""){
+            //     flag = 1;
+            //     msg = msg + "<br>Preencha o campo CPF!";
+            // }
             if (f.email.value ==""){
-                flag = 1;
+                flag = 0;
                 msg = msg + "<br>Preencha o campo E-mail!";
             }
-            if (f.telefone.value ==""){
+            if (f.senha.value ==""){
                 flag = 1;
-                msg = msg + "<br>Preencha o campo Telefone!";
+                msg = msg + "<br>Preencha o campo senha!";
             }
             if (flag == 0){
                 document.getElementById("resposta").style.display = 'none';
@@ -50,7 +85,7 @@
             }
             i.setAttribute("maxlength", 14);
             if(v.length == 3|| v.length == 7) {i.value += ".";} 
-            if (v.length == 11) i.value += "-"; 
+            if (v.length == 11) i.value += "-";
         }
     </script>
 </head>
@@ -59,7 +94,7 @@
     <div>
 
         <h3 style="text-align: center;">
-            Cadastro de Aluno.
+            Entrar
         </h3>
         <hr>
         <br>
@@ -68,21 +103,15 @@
         <section id = "resposta" class="alert alert-danger" role="alert" style = "display:none;">
         
         </section>
-        <form action="desafio_cpf_recebido.php" method="post"name="f" onsubmit = "return validar()">
+        <form action="" method="post">
         <br>
-            <label class="form-label">Name:</label>
-            <input type="text" name="nome" class="form-control">
-
-            <label class="form-label">CPF:</label>
-            <input type="text" name="cpf" oninput="mascara(this)" class="form-control">
-
             <label class="form-label">E-mail:</label>
             <input type="email" name="email" class="form-control">
 
-            <label class="form-label">Telefone:</label>
-            <input type="text" name="telefone" class="form-control">
+            <label class="form-label">Senha:</label>
+            <input type="password" name="senha" class="form-control">
             <br>
-            <input type="submit" value="Enviar" class="btn btn-primary">
+            <input type="submit" value="Entrar" class="btn btn-primary">
         </form>
 
     </div>

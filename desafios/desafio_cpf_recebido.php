@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div>
+    <div> 
        <?php
 
        require_once "desafio_cpf_funcoes.php";
