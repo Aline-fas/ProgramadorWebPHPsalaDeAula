@@ -9,7 +9,7 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css" />
     <title>Senac - Curso de PHP</title>
-    
+     
 </head>
 
 <body>
