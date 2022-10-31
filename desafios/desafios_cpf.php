@@ -83,7 +83,7 @@
             <input type="text" name="telefone" class="form-control">
             <br>
             <input type="submit" value="Enviar" class="btn btn-primary">
-        </form>
+        </form> 
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

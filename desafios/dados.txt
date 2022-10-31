@@ -33,3 +33,66 @@ E-mail:muli@gmail.com
 Telefone:11988776655
 ------------------------------------------
 
+Dados do Aluno - Cadastro realizado em: 27/102022as21:11:59
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:39:48
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:45:31
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:46:28
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:50:30
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:51:27
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:54:47
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:56:32
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
+Dados do Aluno - Cadastro realizado em: 28/102022as14:56:45
+Nome:cleiton
+CPF:444.444.444-44
+E-mail:cleitin@gmail.com
+Telefone:2198887777
+------------------------------------------
+
