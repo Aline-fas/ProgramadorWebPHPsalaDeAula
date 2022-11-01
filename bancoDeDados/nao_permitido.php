@@ -1,10 +1,4 @@
-<?php
-if(!isset($_SESSION)){
-    session_start();
-}
 
-require("protect.php");
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -22,18 +16,15 @@ require("protect.php");
 <body>
     <div> 
     <?php 
-    $idUsuario = $_SESSION["id"];
-    $nomeUsuario = $_SESSION["nome"];
+   
 
-    echo "<br><h2 style='text-align: center;'>Bem vindo ao Sistema!<br>$nomeUsuario</h2>";
+    echo "<br><h2 style='text-align: center;'>Você não pode acessar essa página sem estar logado!<br></h2>";
 
     ?>
     <a href="index.php" class="btn btn-link">
             <i class="bi bi-reply" style="font-size: 2rem;"></i>
     </a>
-    <a href="logout.php" class="btn btn-link">
-        <i class="bi bi-door-closed" style="font-size: 2rem;"></i>
-    </a>
+    
             
     </div>
     
