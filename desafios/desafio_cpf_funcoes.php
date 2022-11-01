@@ -10,46 +10,53 @@ function verifica_cpf($cpf){
     // var_dump ($cpf_vetor);
     print_r($cpf_vetor);
     
-    echo '<br>';    
     echo '<br>';
     $md = 10;
     $mt = 11;
-    $t = 9; 
+     
 
-    // for ($t= 9; $t < 11; $t++){ // duas passadas
-
-    //     for ($d = 0, $c = 0; $c < $t; $c++){ 
-    //         $d += $cpf_vetor [$c] * ($t + 1 - $c);
-    //         // $multi =  $cpf_vetor[$c] *$md;
-    //         // $md--;
-    //         // echo " $multi "; 
-    //         echo " $d ";
-    //     }
-    //     2160
-    //     $d = ((10 * $d) % 11) % 10;
-    //     if ($cpf_vetor[$c] != $d ) {
-    //         return false;
-    //     }
-    // } 
-    // return true;
-    for ($multi=0, $c = 0; $c < $t; $c++){ 
-            // $d += $cpf_vetor [$c] * ($t + 1 - $c);
-                $multi +=  $cpf_vetor[$c] *$md;
-                $md--;
+    for ($multi = 0, $c = 0; $c < 9; $c++){ 
+        $multi +=  $cpf_vetor[$c] * $md;
+        $md--;
+    }
+    // echo " $multi "; 
+    $multi = $multi % 11;//modulo (9)
+    // echo " <br> $multi "; 
+    $dVerificador = 11 - $multi; 
+    if ($dVerificador > 9){
+                $dVerificador = 0;
             }
-            echo " $multi "; 
-            $multi = $multi % 11;
-            $dVerificador = 11 - $multi; // primeiro digito verificador(4)
-            // echo " <br> $multi "; 
-    for ($a = 0, $c = 0; $c < 10; $c++){
-            $a += $cpf_vetor[$c] * $mt;
-            $mt--;
-        } 
-        echo " $a ";
-        $a = $a % 11;
-    $dVerificador2 = 11 - $a;
-}
-// 40 76 108 136 160 180 196 208 216
-// 216 44 84 120 152 180 204 224 240 252 260
-// 260
+        echo " $dVerificador ";
 
+            for ($a = 0, $c = 0; $c < 10; $c++){
+                $a += $cpf_vetor[$c] * $mt;
+                $mt--;
+            } 
+            // echo " $a ";
+            $a = $a % 11; //modulo (0)
+            // echo "$a <br>";
+            $dVerificador2 = 11 - $a; //11
+            if ($dVerificador2 > 9){
+                $dVerificador2 = 0;
+            }
+            echo " $dVerificador2 ";
+            $d =10;
+            
+            return true;
+        }
+        
+        // for ($t= 9; $t < 11; $t++){ // duas passadas
+    
+        //     for ($d = 0, $c = 0; $c < $t; $c++){ 
+        //         $d += $cpf_vetor [$c] * ($t + 1 - $c);
+        //         echo " $d ";
+        //     }
+        //     
+        //     $d = ((10 * $d) % 11) % 10;
+        //     if ($cpf_vetor[$c] != $d ) {
+        //         return false;
+        //     }
+        // } 
+        // return true;
+        
+        
