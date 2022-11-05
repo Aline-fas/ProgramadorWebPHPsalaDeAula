@@ -4,39 +4,46 @@
     box-sizing: border-box;
 }
 
-:root{
-    --cor-de-fundo: rgb(231, 134, 7);
+:root {
+    --cor-de-fundo: rgb(255, 145, 0);
     --cor-secundaria: rgb(255, 255, 255);
-    --cor-azul: rgb(0,0,255);
+    --cor-azul: rgb(0, 0, 255);
     --cor-preto: rgb(0, 0, 0);
-    --cor-laranja-claro: rgb(255, 235, 205);
+    --cor-laranja-claro: rgba(255, 145, 0, 0.05);
 }
 
-body{
+body {
     font-family: Roboto, sans-serif;
-    background-color: var(--cor-de-fundo);
+    background-color: var(--cor-laranja-claro);
+    /* background-color: var(--cor-de-fundo); */
 }
 
-header{
+header {
     background-color: var(--cor-de-fundo);
+    position: relative;
     height: 150px;
+}
+
+header section {
     width: 1024px;
     margin: auto;
     position: relative;
 }
 
-header img{
+
+header img {
     width: 80px;
 }
 
-#logo{
+#logo {
     position: absolute;
     left: 0;
     top: 10px;
     height: 90px;
 }
 
-input[type=text]{
+header input[type=text] {
+    /* ALTERADO */
     width: 500px;
     height: 40px;
     font-size: 25px;
@@ -48,7 +55,7 @@ input[type=text]{
     padding: 0 5px;
 }
 
-#textoEnviamos{
+#textoEnviamos {
     position: absolute;
     left: 275px;
     top: 70px;
@@ -57,7 +64,7 @@ input[type=text]{
     color: var(--cor-secundaria);
 }
 
-#carrinho{
+#carrinho {
     position: absolute;
     left: 20px;
     top: 0;
@@ -65,36 +72,68 @@ input[type=text]{
     border: none;
 }
 
-#cliente{
+#cliente {
     position: absolute;
     right: 5px;
     top: 0;
     background-color: none;
     border: none;
- }
-
-header nav{
-    width: 1024px;
-    position: absolute;
-    bottom: 0;
 }
 
-header nav ul li{
+header nav {
+    position: absolute;
+    bottom: 0;
+    /* left: 0; */
+    background-color: var(--cor-azul);
+    height: 45px;
+    /* Incluindo */
+    width: 100%;
+}
+
+
+header nav ul {
+    height: 40px;
+    /* Incluindo */
+    width: 1024px;
+    margin: auto;
+}
+
+
+header nav ul li {
     display: inline-block;
 }
 
-main{
+#banner {
+    width: 1024px;
+    height: 300px;
+    float: left;
+    border-bottom: 1px solid #BBA6E7;
+
+}
+
+div.orbit-wrapper {
+    margin: auto;
+}
+
+.orbit-bullets {
+    margin: 5px 0;
+    height: 12px;
+    top: 270px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+main {
     background-color: var(--cor-secundaria);
     text-align: justify;
-    min-height: 100vh;
     width: 1024px;
+    min-height: 100vh;
     margin: auto;
     /* margin: 20px; */
     padding: 20px;
     position: relative;
- }
+}
 
-blockquote{
+blockquote {
     padding: 10px;
     float: left;
     width: 30%;
@@ -107,7 +146,7 @@ blockquote{
     margin: 0 5%;
 }
 
-cite{
+cite {
     display: block;
     /* margin: 15px;  Todos os lados iguais*/
     /* margin: 15px 20px; Primeiro valor serve para o TOPO e BOTTOM o segundo valor é para  ESQUERDA e DIREITA*/
@@ -116,7 +155,7 @@ cite{
     text-align: right;
 }
 
-.limpaFloat{
+.limpaFloat {
     clear: both;
 }
 
@@ -124,22 +163,26 @@ h2 {
     font-size: 40px;
 }
 
-p{
+p {
     text-indent: 50px;
+    padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-figure{
+figure {
     width: 19.4%;
     position: absolute;
     top: 20px;
-    right: 30px;    
+    right: 30px;
+    cursor: pointer;
 }
 
-aside, figure{
+aside,
+figure {
     float: right;
     background-color: #7a7a7a;
     color: var(--cor-secundaria);
@@ -151,13 +194,14 @@ aside {
     margin: auto;
     position: relative;
     /* top: -34px; */
+    /* bottom: 190px; */
     bottom: 34px;
     right: 20px;
     clear: right;
     /* background-color: var(--cor-secundaria); */
 }
 
-li{
+li {
     background-color: var(--cor-azul);
     /* list-style-type: none;
     display: block;
@@ -172,31 +216,39 @@ nav ul li a {
     color: var(--cor-secundaria);
     padding: 10px;
     text-decoration: none;
-    text-transform: bold;
     text-align: center;
+    font-weight: bold;
+    /* text-transform: uppercase; */
 }
 
-nav li a:hover{
+nav li a:hover {
     display: block;
     background-color: var(--cor-de-fundo);
     text-transform: bold;
     transition: .6s;
+    border-top: 1px solid rgba(21, 0, 255, 1);
 }
 
-footer{
+footer {
     height: 50px;
     line-height: 50px;
     background-color: black;
     color: blanchedalmond;
-    clear: both;/*left right both*/
+    clear: both;
+    /*left right both*/
 }
 
-.divisaoColuna{
+#rodaPe {
+    width: 1024px;
+    margin: auto;
+}
+
+.divisaoColuna {
     float: left;
     width: 40%;
 }
 
-.reducaoDoTexto{
+.reducaoDoTexto {
     width: 75%;
 }
 
@@ -208,7 +260,7 @@ footer{
 .diferenciado {
     font-family: Roboto, sans-serif;
     font-size: 60px;
-    margin:0;
+    margin: 0;
     text-transform: uppercase;
     /* Isto é um comentário em CSS*/
     color: rgb(0, 0, 255);
@@ -216,36 +268,50 @@ footer{
     /* color: #0000FF; hexadecimal */
 }
 
-img{
+/* img {
     width: 100%
-}
+} */
 
-.vermelho{
+.vermelho {
     color: red;
 }
 
-#nomeCliente{
+#nomeCliente h1 {
+    margin: 0;
+}
+
+#nomeCliente {
     display: block;
     font-size: 18px;
     text-align: center;
 }
 
-aside, nav, ul{
+aside,
+nav,
+ul {
     background-color: var(--cor-azul);
     /* todos os atributos de lista */
     /* só o atributo tipo */
     /* list-style-type: none; */
+    padding: 0;
 }
 
-.icones-sociais li{
+/* .icones-sociais ul {
+    padding: 10px, 0;
+} */
+
+.icones-sociais li {
     background-color: var(--cor-azul);
     display: inline-block;
     width: 40px;
     height: 40px;
     padding: 0;
+    margin-top: 5px;
     margin-left: 10px;
+    margin-bottom: 5px;
 }
-.icones-sociais a{
+
+.icones-sociais a {
     /* background-image: url(../img/github.png); */
     width: 40px;
     height: 40px;
@@ -254,16 +320,16 @@ aside, nav, ul{
     text-indent: -9999px;
     /* font-size: 0 !important; */
     /* color: rgba(0,0,0,0); */
- }
+}
 
- .github{
-     background-image: url(../img/github.png);
- }
+.github {
+    background-image: url(../img/github.png);
+}
 
- .linkedin{
-     background-image: url(../img/linkedin.png);
- }
+.linkedin {
+    background-image: url(../img/linkedin.png);
+}
 
- .twitter{
-     background-image: url(../img/twitter.png)
- }
+.twitter {
+    background-image: url(../img/twitter.png)
+}
