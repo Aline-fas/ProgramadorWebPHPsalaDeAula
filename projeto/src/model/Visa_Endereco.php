@@ -1,31 +1,31 @@
 <?php
 //  ORIENTADO A OBJETOS
 
-class Funcionario { 
+class Cliente { 
     //O que eu tenho
 
-    private int $idFuncionario;
+    private int $idCliente;
     private string $nome;
     private string $dataNascimento;
+    private string $orgao;
+    private string $rg;
     private string $cpf;
     private string $estadoCivil;
     private string $sexo;
-    private string $tipo;
-    private string $celular;
     private string $email;
     private string $senha;
     private bool $ativo;
 
     //Metodo construtor
-    public function __construtor(int $idFuncionario,string $nome,string $dataNascimento,string $cpf,string $estadoCivil,string $sexo, string $tipo, string $celular, string $email,string $senha,bool $ativo){
+    public function __construtor(int $idCliente,string $nome,string $dataNascimento,string $orgao, string $rg,string $cpf,string $estadoCivil,string $sexo,string $email,string $senha,bool $ativo){
         $this->nome = $nome;
-        $this->idFuncionario =  $idFuncionario;
+        $this->idCliente =  $idCliente;
         $this->dataNascimento = $dataNascimento;
+        $this->orgao = $orgao;
+        $this->rg = $rg;
         $this->cpf = $cpf;
         $this->estadoCivil = $estadoCivil;
         $this->sexo = $sexo;
-        $this->tipo = $tipo;
-        $this->celular = $celular;
         $this->email = $email;
         $this->senha = $senha;
         $this->ativo = $ativo;
@@ -39,11 +39,11 @@ class Funcionario {
         }
     }
     //Metodos acessorios Getters e Setters
-    public function getIdFuncionario(): int{
-        return $this ->idFuncionario;
+    public function getIdCliente(): int{
+        return $this ->idCliente;
     }
-    public function setIdFuncionario(int $idFuncionario) : void {
-        $this->idFuncionario = $idFuncionario;
+    public function setIdCliente(int $idCliente) : void {
+        $this->idCliente = $idCliente;
     }
     public function getNome(): string
     {
@@ -63,6 +63,26 @@ class Funcionario {
     public function setDataNascimento(string $dataNascimento): void
     {
         $this->dataNascimento = $dataNascimento;
+    }
+
+    public function getOrgao(): string
+    {
+        return $this->orgao;
+    }
+
+    public function setOrgao(string $orgao): void
+    {
+        $this->orgao = $orgao;
+    }
+
+    public function getRg(): string
+    {
+        return $this->rg;
+    }
+
+    public function setRg(string $rg): void
+    {
+        $this->rg = $rg;
     }
 
     public function getCpf(): string
@@ -96,27 +116,6 @@ class Funcionario {
         $this->sexo = $sexo;
     }
 
-    public function getTipo(): string
-    {
-        return $this->tipo; 
-    }
-
-    public function setTipo(string $tipo): void
-    {
-        $this->tipo = $tipo;
-    }
-
-    public function getCelular(): string
-    {
-        return $this->celular;
-    }
-
-    public function setCelular(string $celular): void
-    {
-        $this->celular = $celular;
-    }
-
-
     public function getEmail(): string
     {
         return $this->email;
@@ -143,7 +142,7 @@ class Funcionario {
     }
 
     public function setAtivo(bool $ativo): void
-    { 
+    {
         $this->ativo = $ativo;
     }
 }

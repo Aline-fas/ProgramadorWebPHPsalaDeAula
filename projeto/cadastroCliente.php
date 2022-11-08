@@ -3,7 +3,11 @@
 
 <head>
 
-	<?php require "html/head.php" ?>
+	<?php require "html/head.php";
+	if(!isset($_SESSION)){
+		session_start();
+	}
+	 ?>
 <script>
 function confirma() {
 			if (f.senha.value == "") {
@@ -47,26 +51,58 @@ function confirma() {
 		$estado_civil = isset($_POST['estado_civil'])? $_POST['estado_civil']: "";
 		$sexo = isset($_POST['sexo'])? $_POST['sexo']: "";
 		$email = isset($_POST['email'])? $_POST['email']: "";
-		$senha = isset($_POST['senha'])? $_POST['senha']: "";
+		$senha = isset($_POST['senha'])? password_hash($_POST['senha'], PASSWORD_DEFAULT): "";
 		$ativo = isset($_POST['ativo'])? $_POST['ativo']: true;
 
-		if($_POST['nome'] && $_POST['senha2']){
+		if(isset($_POST['nome']) && isset($_POST['senha2'])){
 			$cliente = new Cliente(
                 $idCliente,
-                $nome,
+                $nome, 
                 $dataNascimento,
                 $orgao,
                 $rg,
                 $cpf,
-                $estadoCivil,
+                $estado_civil,
                 $sexo,
                 $email,
                 $senha,
                 $ativo
 			);
-			$sql_code = "INSERT INTO cliente  VALUES (NULL, '$nome', '$dataNascimento', '$orgao', '$rg', '$cpf', '$estadoCivil', '$sexo', '$email', '$senha', true)";
+			$sql_code = "INSERT INTO cliente  VALUES (NULL, '$nome', '$dataNascimento', '$orgao', '$rg', '$cpf', '$estado_civil', '$sexo', '$email', '$senha', true)";
 
 			$sql_query = $conexao -> query($sql_code);
+			if ($sql_query){
+				$sql_code = "SELECT idcliente, nome FROM  cliente WHERE cpf = '$cpf'";
+				$sql_query = $conexao -> query ($sql_code);
+				$cliente = $sql_query-> fetch_assoc();
+				$_SESSION["id"] = $cliente['idcliente'];
+				$_SESSION["nome"] = $cliente['nome'];
+
+				echo '<!DOCTYPE html>';
+				echo '<html lang="pt-br">';
+				echo '<head>';
+			echo '</head>';
+			echo '<body>';
+			echo '<div style="width: 1024px; margin: auto;" class="alert alert-success" role="alert">
+				Cadastro realizado com sucesso! <a style="text-decoration: none; float: right;" href="cadastroCliente.php" class="alert-link">x</a>
+				<br><a style="text-decoration: none; float: left;" href="cadastroClienteComplemento.php" class="alert-link">Cadastro Coplementar</a><br>
+			</div>';
+			echo '</body>';
+			echo '</html>';
+			} else {
+				echo '<!DOCTYPE html>';
+				echo '<html lang="pt-br">';
+				echo '<head>';
+				echo '   <meta http-equiv="refresh" content="10; url=cadastroCliente.php">';
+				echo '</head>';
+				echo '<body>';
+				echo '<div style="width: 1024px; margin: auto;" class="alert alert-danger" role="alert">
+					Erro ao adicionado! <a style="text-decoration: none; float: right;" href="cadastroCliente.php" class="alert-link">x</a>
+				</div>';
+				echo '</body>';
+				echo '</html>';
+
+			}
 		}
 		?>
 

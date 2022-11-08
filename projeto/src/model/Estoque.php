@@ -78,3 +78,4 @@ class Estoque {
     {
         $this->valor = $valor;
     }
+}

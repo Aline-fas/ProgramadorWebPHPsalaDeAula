@@ -24,7 +24,7 @@ class Contatos {
     //     }else{
     //         $this->nome = $nome;
     //     }
-    // }
+    // } 
     //Metodos acessorios Getters e Setters
     public function getIdContatos(): int{
         return $this ->idContatos;
@@ -68,3 +68,4 @@ class Contatos {
 
         $this->obs = $obs;
     }
+}

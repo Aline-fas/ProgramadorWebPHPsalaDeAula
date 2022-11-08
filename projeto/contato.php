@@ -3,25 +3,14 @@
 
 <head>
 
-	<?php require "html/head.php" ?>
-
+<?php require "html/head.php" ?>
 
 </head>
-
-	<!--  -->
-	<body>
 	
+	<body>
 		<?php include "html/header.php" ?>
-		<div id="banner">
-			<img src="img/banner/banner1.png" alt="banner do site">
-			<img src="img/banner/banner2.png" alt="banner do site">
-			<img src="img/banner/banner3.png" alt="banner do site">
-			
-		</div>
-		
 		<main>
-					
-							
+			
 		</main>
 		
 		<?php include "html/footer.php" ?>
