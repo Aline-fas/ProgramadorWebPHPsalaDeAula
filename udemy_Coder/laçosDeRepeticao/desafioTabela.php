@@ -18,12 +18,12 @@
             ['11','12','13','14','15'],
             ['16','17','18','19','20'],
         ];
-        // print_r($array[3]);
+        // print_r($matriz[1]);
 
         foreach($matriz as $linha){
             foreach ($linha as $valor){
                 
-                echo "$valor  ";
+                echo "$valor  " ;
             }
             echo "<br>";
         }
