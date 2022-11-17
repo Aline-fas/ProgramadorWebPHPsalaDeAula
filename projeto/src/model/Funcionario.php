@@ -9,7 +9,6 @@ class Funcionario {
     private string $dataNascimento;
     private string $cpf;
     private string $estadoCivil;
-    private string $sexo;
     private string $tipo;
     private string $celular;
     private string $email;

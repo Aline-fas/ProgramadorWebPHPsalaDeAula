@@ -14,11 +14,14 @@
 		<?php include "html/header.php";
 			require_once "src/conexao.php";
 
-			$sql_code = "SELECT * FROM produtos";
+			$id= isset($_GET['id'])? $_GET['id'] : 0;
+
+			$sql_code = "SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = '$id'";
+
 			$sql_query = $conexao->query($sql_code);
 		?>
 		<main>
-			<h1>Produtos</h1>
+			<h1>Estoque</h1>
 			<h3>Lista cadastrados</h3>
 			<table class="table table-striped">
 				<tr>
@@ -28,8 +31,11 @@
 					<th>TIPO</th>
 					<th>CATEGORIA</th>
 					<th>FABRICANTE</th>
-					<th>ATIVO</th>
-					<th>AÇÃO</th>
+					<th>QTD</th>
+					<th>REGISTRO</th>
+					<th>DATA</th>
+					<th>VALOR COMPRA</th>
+					<th>VALOR VENDA</th>
 				</tr>
 				<?php
 					while ($produto = $sql_query->fetch_assoc()){
@@ -41,11 +47,11 @@
 					<td><?= $produto['tipo']?></td>
 					<td><?= $produto['categoria']?></td>
 					<td><?= $produto['fabricante']?></td>
-					<td><?= $produto['ativo']?></td>
-					<td>
-					<a href="estoque.php?id=<?=$produto["idproduto"]; ?>">[ESTOQUE]</a>
-						<a href="maisDetalhes.php?id=<?=$produto["idproduto"]; ?>">[DETALHES]</a>
-					</td>
+					<td><?= $produto['qtd']?></td>
+					<td><?= $produto['registro']?></td>
+					<td><?= $produto['data_registro']?></td>
+					<td><?= $produto['valor_compra']?></td>
+					<td><?= $produto['valor_venda']?></td>
 				</tr>
 					<?php }?>
 			</table>

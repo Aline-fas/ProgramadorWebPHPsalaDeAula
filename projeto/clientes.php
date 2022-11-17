@@ -28,7 +28,7 @@
 			$id = isset($_SESSION["id"]) ? $_SESSION["id"] : 0;
 			$nome = isset($_SESSION['nome']) ? $_SESSION['nome'] : 0;
 
-			echo "ID: $id - Cliente: $nome";
+			// echo "ID: $id - Cliente: $nome";
 
 		?>
 		<main>
@@ -55,13 +55,14 @@
 						<td><?=$cliente["idcliente"]; ?></td>
 						<td><?=$cliente["nome"]; ?></td>
 						<td><?=$cliente["data_nascimento"]; ?></td>
+						<!-- date('d-m-Y') echo date('d/m/Y', strtotime($variavel)) -->
 						<td><?=$cliente["orgao"]; ?></td>
 						<td><?=$cliente["rg"]; ?></td>
 						<td><?=$cliente["cpf"]; ?></td>
 						<td><?=$cliente["estado_civil"]; ?></td>
 						<td><?=$cliente["sexo"]; ?></td>
 						<td><?=$cliente["email"]; ?></td>
-						<td><?=$cliente["ativo"]; ?></td>
+						<td><?=$cliente["ativo"]; ?></td> 
 						<td>
 						<a href="edicaoCliente.php?id=<?=$cliente["idcliente"]; ?>">[EDITAR]</a>
 						<a href="excluirCliente.php?id=<?=$cliente["idcliente"]; ?>">[EXCLUIR]</a>

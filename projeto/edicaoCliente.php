@@ -29,7 +29,7 @@ function confirma() {
 				document.getElementById("erro").style.display = 'block';
 				document.getElementById("btn-off").style.display = 'block';
 				document.getElementById("btn-on").style.display = 'none';
-				<?php $res = true ?>
+				<?php $res = true ?> 
 
 			}
 
