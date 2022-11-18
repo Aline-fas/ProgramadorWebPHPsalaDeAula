@@ -7,7 +7,7 @@
 			include "html/head.php";
 			require_once "src/conexao.php";
 
-			$id = $_GET['id'];
+			$id= isset($_GET['id'])? $_GET['id'] : 0;
 
 			$sql_code1 = " SELECT 
 								* 
