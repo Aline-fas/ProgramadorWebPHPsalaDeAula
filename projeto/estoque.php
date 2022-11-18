@@ -1,41 +1,3 @@
-<?php
-require_once "src/conexao.php";
-
-//pegando id do produto
-$id= isset($_GET['id'])? $_GET['id'] : 0;
-
-//pega as informações do produto cadastrado no banco de dados
-$sql_code = "SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = '$id'";
-$sql_query = $conexao->query($sql_code);
-
-//pega os valores do form de cadastro do estoque
-$qtd = isset($_POST["qtd"])? $_POST["qtd"] : "";
-$registro = isset($_POST["registro"])? $_POST["registro"] : "";
-$data_registro = isset($_POST["data_registro"])? $_POST["data_registro"] : "";
-$valor_compra = isset($_POST["valor_compra"])? $_POST["valor_compra"] : "";
-$valor_venda = isset($_POST["valor_venda"])? $_POST["valor_venda"] : "";
-
-if (isset($_POST['id_produto'])){
-
-	// INSERE DADOS DE ESTOQUE
-	$sql_code = "
-		INSERT INTO estoque (id_produto, qtd, registro, data_registro,valor_compra, valor_venda ) 
-		VALUES ({$id}, {$qtd}, '{$registro}', '{$data_registro}', '{$valor_compra}', '{$valor_venda }')";
-	$sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " .  $conexao->error . "<br>" . var_dump($conexao->error));
-
-
-
-	if($sql_query){
-		echo "<p>Estoque salvo com sucesso!</p>";
-	}else{
-		echo "Não gravou";
-	}
-	
-	header('Location: '.$_SERVER['PHP_SELF']. '?id='.$_GET['id']);
-	die;
-}
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,8 +10,44 @@ if (isset($_POST['id_produto'])){
 </head>
 	
 	<body>
-		<?php include "html/header.php";
+		<?php 
+			include "html/header.php";
 			
+			require_once "src/conexao.php";
+
+			//pegando id do produto
+			$id= isset($_GET['id'])? $_GET['id'] : 0;
+
+			//pega as informações do produto cadastrado no banco de dados
+			$sql_code = "SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = '$id'";
+			$sql_query = $conexao->query($sql_code);
+
+			//pega os valores do form de cadastro do estoque
+			$qtd = isset($_POST["qtd"])? $_POST["qtd"] : "";
+			$registro = isset($_POST["registro"])? $_POST["registro"] : "";
+			$data_registro = isset($_POST["data_registro"])? $_POST["data_registro"] : "";
+			$valor_compra = isset($_POST["valor_compra"])? $_POST["valor_compra"] : "";
+			$valor_venda = isset($_POST["valor_venda"])? $_POST["valor_venda"] : "";
+
+			if (isset($_POST['id_produto'])){
+
+				// INSERE DADOS DE ESTOQUE
+				$sql_code = "
+					INSERT INTO estoque (id_produto, qtd, registro, data_registro,valor_compra, valor_venda ) 
+					VALUES ({$id}, {$qtd}, '{$registro}', '{$data_registro}', '{$valor_compra}', '{$valor_venda }')";
+				$sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " .  $conexao->error . "<br>" . var_dump($conexao->error));
+
+
+
+				if($sql_query){
+					echo "<p>Estoque salvo com sucesso!</p>";
+				}else{
+					echo "Não gravou"; 
+				}
+				
+				header('Location: '.$_SERVER['PHP_SELF']. '?id='.$_GET['id']);
+				die;
+			}
 
 
 		?>

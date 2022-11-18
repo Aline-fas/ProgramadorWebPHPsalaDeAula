@@ -9,11 +9,7 @@
 
 			$id= isset($_GET['id'])? $_GET['id'] : 0;
 
-			$sql_code1 = " SELECT 
-								* 
-							FROM produtos 
-							LEFT JOIN estoque ON idproduto = id_produto 
-							WHERE idproduto = $id ";
+			$sql_code1 = " SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = $id ";
 			$sql_query1 = $conexao->query($sql_code1) or die("Falha na execução do codigo SQL: " .$conexao->error);
 			
 			$lista = [];
@@ -22,21 +18,10 @@
 				$prod1 = $sql_query1->fetch_assoc();
 				$lista[] = $prod1;
 			}
-				//echo '<pre>';print_r($prod1);die;
+				 
 		?>
 
 </head> 
-
-			<!-- alteração a fazer no banco de dados em casa
-			
-			use projeto;
-
-RENAME TABLE produto TO produtos;
-ALTER TABLE produtos ADD categoria varchar(30) AFTER tipo;
-ALTER TABLE produtos ADD fabricante varchar(30) AFTER categoria;
-ALTER TABLE estoque CHANGE valor valor_compra double;
-ALTER TABLE estoque ADD valor_venda double AFTER valor_compra;
- -->
 	
 	<body>
 		<?php include "html/header.php" ?>
