@@ -3,9 +3,29 @@
 
 <head>
 
-<?php require "html/head.php" ?>
+<?php 
+			include "html/head.php";
+			require_once "src/conexao.php";
 
-</head>
+			$id = $_GET['id'];
+
+			$sql_code1 = " SELECT 
+								* 
+							FROM produtos 
+							LEFT JOIN estoque ON idproduto = id_produto 
+							WHERE idproduto = $id ";
+			$sql_query1 = $conexao->query($sql_code1) or die("Falha na execução do codigo SQL: " .$conexao->error);
+			
+			$lista = [];
+
+			if($sql_query1->num_rows > 0){
+				$prod1 = $sql_query1->fetch_assoc();
+				$lista[] = $prod1;
+			}
+				//echo '<pre>';print_r($prod1);die;
+		?>
+
+</head> 
 
 			<!-- alteração a fazer no banco de dados em casa
 			
@@ -23,16 +43,16 @@ ALTER TABLE estoque ADD valor_venda double AFTER valor_compra;
 		<main>
 			<h1>Detalhes do produto</h1>
 			<div class="card">
-				<img src="" style="width: 20rem; margin: auto" class="card-img-top" alt="...">
+				<img src="<?php echo $prod1['foto']?>" style="width: 20rem; margin: auto" class="card-img-top" alt="...">
 				<div class="card-body">
-					<h5 class="card-title"></h5>
-					<p class="card-text"></p>
+					<h5 class="card-title"><?php echo $prod1['nome']?></h5>
+					<p class="card-text"><?php echo $prod1['descricao']?></p>
 				</div>
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item">TIPO: </li>
-					<li class="list-group-item">CATEGORIA: </li>
-					<li class="list-group-item">EM ESTOQUE: </li>
-					<li class="list-group-item">Valor: R$ </li>
+					<li class="list-group-item">TIPO: <?php echo $prod1['tipo']?></li>
+					<li class="list-group-item">CATEGORIA: <?php echo $prod1['categoria']?></li>
+					<li class="list-group-item">EM ESTOQUE: <?php echo $prod1['qtd']?></li>
+					<li class="list-group-item">Valor: R$ <?php echo $prod1['valor_venda']?></li>
 				</ul>
 				<div class="card-body">
 					<a href="index.php" class="card-link">Voltar</a>
