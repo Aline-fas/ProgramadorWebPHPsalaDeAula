@@ -1,4 +1,16 @@
-<?php 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+	<?php 
+		include "html/head.php";
+	?>
+ 
+</head>
+	
+	<body>
+		<?php 
 			include "html/header.php";
 			
 			require_once "src/conexao.php";
@@ -39,19 +51,6 @@
 
 
 		?>
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-
-	<?php 
-		include "html/head.php";
-	?>
- 
-</head>
-	
-	<body>
-		
 		<main>
 			<h1>Estoque</h1>
 			<h3>Lista cadastrados</h3>

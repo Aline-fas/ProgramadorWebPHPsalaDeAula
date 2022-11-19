@@ -30,6 +30,12 @@ header section {
     position: relative;
 }
 
+.fotoProduto{
+    height: 200px;
+    margin: auto;
+    object-fit: cover;
+}
+
 
 header img {
     width: 80px;
