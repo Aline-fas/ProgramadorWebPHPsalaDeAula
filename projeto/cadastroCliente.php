@@ -38,7 +38,7 @@ function confirma() {
 </head>
 	
 	<body>
-		<?php include "html/header.php";
+		<?php include "html/header.php"; 
 		require_once "src/conexao.php";
 		require_once "src/model/Cliente.php";
 

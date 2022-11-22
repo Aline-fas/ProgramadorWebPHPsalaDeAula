@@ -57,7 +57,8 @@
                             ?> 
                         </td>
                         <td>
-                            <a href="/excluirRegistro2.php&excluir=<?=$registro['id']?>" class=  "btn btn-danger">
+                        <!-- <a href="excluirCliente.php?id=<?=$cliente["idcliente"]; ?>">[EXCLUIR]</a> -->
+                            <a href="excluirRegistro2.php?id<?=$registro['id'];?>" class=  "btn btn-danger">
                             excluir
                             </a> 
                         </td>

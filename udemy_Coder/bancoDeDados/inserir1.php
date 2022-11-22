@@ -16,12 +16,12 @@
 
             (nome, nascimento, email, site, filhos, salario)
             VALUES (
-                'Cecilia', 
-                '1964-12-03', 
-                'cecilia@email.com', 
-                'https://www.cecilia.com', 
-                7, 
-                3500.44
+                'Gilberto', 
+                '1965-02-06', 
+                'gilberto@email.com', 
+                'https://www.gilberto.com', 
+                4, 
+                5649.55
             )";
             
             $conexao = novaConexao();

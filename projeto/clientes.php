@@ -32,6 +32,7 @@
 
 		?>
 		<main>
+		
 			<h1>Clientes</h1>
 			<h3>Lista de cadastrados</h3>
 			<div class="table-responsive">
@@ -52,6 +53,7 @@
 					<?php
 						foreach($lista as $cliente): ?>
 					<tr>
+					
 						<td><?=$cliente["idcliente"]; ?></td>
 						<td><?=$cliente["nome"]; ?></td>
 						<td><?=$cliente["data_nascimento"]; ?></td>
@@ -65,7 +67,27 @@
 						<td><?=$cliente["ativo"]; ?></td> 
 						<td>
 						<a href="edicaoCliente.php?id=<?=$cliente["idcliente"]; ?>">[EDITAR]</a>
-						<a href="excluirCliente.php?id=<?=$cliente["idcliente"]; ?>">[EXCLUIR]</a>
+						<!-- <?php
+							if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){ ?>
+							
+							<a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>"[EXCLUIR] </a>
+
+						<?php } ?> -->
+
+							<!-- <?php
+							if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){ 
+							$idc = $cliente['idcliente'];
+							echo "<a href='excluirCliente.php?id=$idc'>[EXCLUIR] </a>";
+								
+						 	} 
+						 ?> -->
+						 <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){?>
+
+						<a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>">[EXCLUIR]</a>
+
+						<?php } 
+						
+						?>
 						</td>
 						<?php endforeach?>
 					</tr>
