@@ -9,7 +9,7 @@
         if ($conexao->connect_error){//connect_error significa que a conexao foi mal sucedida
             die ('Erro: '. $conexao->connect_error);
 
-            //ou
+            //ou 
             // echo ('Erro: '. $conexao->connect_error);
             // exit();
         }

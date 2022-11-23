@@ -1,8 +1,8 @@
 <?php
 
-$hostname = "localhost";
 $banco_de_dados = "projeto";
-$usuario = "root";
+$hostname = "localhost";
+$usuario = "root"; 
 $senha = "";
 
 $conexao = new mysqli($hostname, $usuario, $senha, $banco_de_dados);

@@ -81,9 +81,33 @@
 								
 						 	} 
 						 ?> -->
+						 
 						 <?php if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){?>
 
-						<a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>">[EXCLUIR]</a>
+						<!-- <a href="excluirCliente.php?id=<?=$cliente['idcliente']; ?>" data-bs-toggle="modal" data-bs-target="#logout_modal">[EXCLUIR]</a> -->
+						<a href="src/controler/cliente_bd/excluirCliente.php?id=<?=$cliente['idcliente'];?>" data-bs-toggle="modal" data-bs-target="#excluir_modal">[EXCLUIR]</a>
+						<!-- <a href="#?id=<?=$cliente['idcliente'];?>" data-bs-toggle="modal" data-bs-target="#excluir_modal">[EXCLUIR]</a> -->
+						
+						<div class="modal fade" id="excluir_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1 class="modal-title fs-5" id="staticBackdropLabel">Excluir</h1>
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<form action="src/controler/cliente_bd/excluirCliente.php?id=<?=$cliente["idcliente"]; ?>" method="post" >
+										<div class="modal-body">
+											<h2 style= "Text-align: center">Deseja realmente excluir este cliente? </h2>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+											<button type="submit" class="btn btn-danger">Excluir</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>	
+
 
 						<?php } 
 						

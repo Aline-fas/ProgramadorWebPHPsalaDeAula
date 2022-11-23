@@ -13,7 +13,7 @@
         <?php
             require_once "criandoConexao.php";
 
-            $sql = "DELETE FROM cadastro WHERE id = 3";
+            $sql = "DELETE FROM cadastro WHERE id = 2";
 
             $conexao = novaConexao();
             $resultado = $conexao->query($sql);
