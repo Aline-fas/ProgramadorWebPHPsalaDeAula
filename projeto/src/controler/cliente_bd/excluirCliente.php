@@ -3,24 +3,27 @@
 require_once "../../protect.php";
 require_once "../../conexao.php";
 
-// $idCliente = 5;
-$idCliente = filter_input(INPUT_POST, 'idcliente', FILTER_SANITIZE_NUMBER_INT);
+if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador") {
+    $idCliente = isset($_GET['id']) ? $_GET['id'] : 0;
 
-// $idCliente = isset($_POST['idcliente']) ? $_POST['idcliente'] : 0;
+    if($idCliente > 0){
 
-$sql = "DELETE FROM cliente WHERE idcliente = '$idCliente'";
-$sql_query = $conexao->query($sql);
+        $sql = "DELETE FROM cliente WHERE idcliente = '$idCliente'";
+        $sql_query = $conexao->query($sql);
 
-
-if ($sql_query){
-    // echo "Sucesso total";
-    header("Location: ../../../clientes.php");
+        header("Location: ../../../clientes.php");
+    }else {
+        
+        header("Location: ../../../index.php");
+    }
 }else {
-    // echo "Tente outra vez";
-    header("Location: ../../../index.php");
+    
+    header("Location: ../../../nao_permitido.php");
 }
 
-// $conexao->close();
+
+
+
 
 
 

@@ -1,9 +1,12 @@
 <?php
 
-$banco_de_dados = "projeto";
 $hostname = "localhost";
-$usuario = "root"; 
+$banco_de_dados = "projeto";
+$banco_de_dados = "id19904056_projetobd";
+$usuario = "root";
+$usuario = "id19904056_desenvolvedor";
 $senha = "";
+$senha = "b!!(=S-l1ylO/h*~";
 
 $conexao = new mysqli($hostname, $usuario, $senha, $banco_de_dados);
 if($conexao->connect_errno){ // error + number = errno

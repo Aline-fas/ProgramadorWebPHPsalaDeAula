@@ -60,18 +60,17 @@
 					<td><?= $produto['categoria']?></td>
 					<td><?= $produto['fabricante']?></td>
 					<td><?= $produto['ativo']?></td>
-					<td> 
-					<?php
-					if ($_SESSION['tipo'] == "Administrador"){
-					
-						$idProduto = $produto ['idproduto'];
-						echo "<a href='estoque.php?id=$idProduto;'>[ESTOQUE]</a>";
-
-					}
-					?>
-						<a href="maisDetalhes.php?id=<?=$produto["idproduto"]; ?>">[DETALHES]</a>
+					<td>
+						<?php
+							if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == "Administrador"){
+								$idProduto = $produto['idproduto'];
+								echo "<a href='estoque.php?id=$idProduto;'>[ESTOQUE]</a>";
+							}
+						?>
+                        <a href="mais_detalhes.php?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
 					</td>
 				</tr>
+				
 					<?php }?>
 			</table>
 		</main>
