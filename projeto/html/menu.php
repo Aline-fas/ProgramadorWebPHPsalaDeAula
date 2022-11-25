@@ -5,6 +5,8 @@
             <?php
                 if (isset($_SESSION['tipo'])){
                     echo '<li><a href="clientes.php">Clientes</a></li>';
+                }elseif(!isset($_SESSION['tipo'])){
+                    echo '<li><a href="edicaoCliente.php">configurações</a><i class= "bi bi-gear-fill" style =" color:white;"></i></a></li>';
                 }
             ?>
             <?php
