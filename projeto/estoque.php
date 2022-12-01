@@ -7,6 +7,8 @@
 			$id= isset($_GET['id'])? $_GET['id'] : 0;
 
 			//pega as informações do produto cadastrado no banco de dados
+						
+			
 			$sql_code = "SELECT * FROM produtos LEFT JOIN estoque ON idproduto = id_produto WHERE idproduto = '$id'";
 			$sql_query = $conexao->query($sql_code);
 

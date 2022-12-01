@@ -4,16 +4,16 @@
 class Funcionario { 
     //O que eu tenho
 
-    private int $idFuncionario;
-    private string $nome;
-    private string $dataNascimento;
-    private string $cpf;
-    private string $estadoCivil;
-    private string $tipo;
-    private string $celular;
-    private string $email;
-    private string $senha;
-    private bool $ativo;
+    private $idFuncionario;
+    private $nome;
+    private $dataNascimento;
+    private $cpf;
+    private $estadoCivil;
+    private $tipo;
+    private $celular;
+    private $email;
+    private $senha;
+    private $ativo;
 
     //Metodo construtor
     public function __construtor(int $idFuncionario,string $nome,string $dataNascimento,string $cpf,string $estadoCivil,string $sexo, string $tipo, string $celular, string $email,string $senha,bool $ativo){

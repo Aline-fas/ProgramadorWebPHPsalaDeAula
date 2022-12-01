@@ -19,14 +19,17 @@
 		if (isset($_SESSION['id'])){
 			$id = $_SESSION['id'];
 		}
-		?>
 
+		$sql_code = "SELECT * FROM cliente LEFT JOIN endereco ON idcliente = endereco.id_cliente LEFT JOIN contatos ON idcliente = contatos.id_cliente WHERE idcliente = '$id'";
+		$sql_query = $conexao->query($sql_code);
+		?>
+		
 		<main>
 		<div class="row row-cols-1 row-cols-md-3 g-4">
 			<a href="edicaoCliente.php?id=<?=$id;?>">
 				<div class="col">
-					<div class="card">
-					<i class= "bi bi-person-square text-center text-success" style ="font-size: 10rem;"></i>
+					<div class="card"> 
+						<i class= "bi bi-person-square text-center text-sucess" style ="font-size: 10rem;"></i>';
 						<div class="card-body">
 							<h5 class="card-title text-center">Dados Pessoais</h5>
 						</div>
@@ -36,7 +39,18 @@
 			<a href="cadastroClienteComplemento.php?id=<?=$id;?>">
 				<div class="col">
 					<div class="card">
-					<i class= "bi bi-house text-center text-success" style ="font-size: 10rem;"></i>
+					<?php
+						while ($cliente = $sql_query->fetch_assoc()){
+
+							if($cliente['cep'] == ""){
+								echo '<i class= "bi bi-house text-center text-danger" style ="font-size: 10rem;"></i>';
+										
+							}else{
+								echo '<i class= "bi bi-house text-center text-success" style ="font-size: 10rem;"></i>';
+								}
+						}
+					?>
+					
 						<div class="card-body">
 							<h5 class="card-title text-center">Endereço </h5>
 						</div>
@@ -46,6 +60,17 @@
 			<a href="edicaoCliente.php?id=<?=$id;?>">
 				<div class="col">
 					<div class="card">
+					<?php
+						while ($cliente = $sql_query->fetch_assoc()){
+
+							if($cliente['tipo'] == ""){
+								echo '<i class= "bi bi-house text-center text-danger" style ="font-size: 10rem;"></i>';
+										
+							}else{
+								echo '<i class= "bi bi-house text-center text-success" style ="font-size: 10rem;"></i>';
+								}
+						}
+					?>
 					<i class= "bi bi-telephone text-center text-success" style ="font-size: 10rem;"></i>
 						<div class="card-body">
 							<h5 class="card-title text-center ">Contato </h5>

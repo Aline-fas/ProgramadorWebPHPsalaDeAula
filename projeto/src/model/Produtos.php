@@ -4,12 +4,12 @@
 class Produto { 
     //O que eu tenho
 
-    private int $idProduto;
-    private string $nome;
-    private string $tipo;
-    private string $descricao;
-    private string $foto;
-    private bool $ativo;
+    private $idProduto;
+    private $nome;
+    private $tipo;
+    private $descricao;
+    private $foto;
+    private $ativo;
 
     //Metodo construtor
     public function __construtor(int $idProduto,string $nome,string $tipo,string $descricao,string $foto,bool $ativo){
