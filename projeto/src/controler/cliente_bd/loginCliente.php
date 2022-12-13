@@ -5,6 +5,7 @@
             
             $email = $conexao->real_escape_string($_POST["email"]);
             $senha = $conexao->real_escape_string($_POST["senha"]);
+            $lembrar = isset($_POST['lembrar]']) ? $_POST['lembrar'] : false ; 
 
             $sql_code = "select *  from cliente where email = '$email'";
             $sql_query = $conexao->query($sql_code) or die("Falha na execução do código SQL: " . $conexao->error);
@@ -21,6 +22,24 @@
                     }
                     $_SESSION['id'] = $cliente ['idcliente'];
                     $_SESSION['nome'] = $cliente ['nome'];
+
+                    //criando cookie
+                    //+3600 ou 60*60  (1h)
+                    //+60*60*24 (24h)
+                    //+60*60*24*30 (30dias) ...
+
+
+                    // strtotime('now');
+                    // strtotime('+1 day');
+                    setcookie('cliente', $cliente['nome'], time()+259200, "/");
+                    // setcookie('cliente', $cliente ['nome'], strtotime('+1 month'), "/");
+                    // setcookie('login', $cliente['email'], strtotime('+1 day'), "/", "", false, true);
+                    // var_dump($lembrar);
+                    if($lembrar){
+                        setcookie('login', $cliente['email'], time()+259200, "/", "", false, true);
+                    }else{
+                        setcookie('login', $cliente['email'], time()-259200, "/", "", false, true);
+                    }
 
                     header("Location: ../../../index.php");
                 }else {

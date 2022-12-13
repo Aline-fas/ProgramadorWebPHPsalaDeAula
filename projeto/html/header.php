@@ -1,3 +1,6 @@
+<?php 
+	$login = isset($_COOKIE['login']) ? $_COOKIE['login'] : "" ;
+?>
 <header>
 			<section>
 				<figure id="logo">
@@ -42,13 +45,17 @@
 							<br>
 
 							<label class="form-label">E-mail:</label><br>
-							<input type="text" name="email" class="form-control" placeholder="E-mail"><br>
+							<input type="text" name="email" class="form-control" placeholder="E-mail" value="<?= $login ?>"><br>
 
 							<label class="form-label">Senha:</label><br>
 							<input type="password" name="senha" class="form-control"><br>
 
 							<!-- <input type="submit" value="Entrar" class="btn btn-primary"> -->
 
+							<div class="form-group">
+								<input type="checkbox" name="lembrar" id="lembrar" <?= ($login !='') ? 'checked': '';?> >
+								<label for="lembrar">Lembrar meu e-mail</label> <br>
+							</div>
 
 							<a href="cadastroCliente.php">Crie o seu CADASTRO</a>
 						</div>

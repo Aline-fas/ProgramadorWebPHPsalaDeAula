@@ -90,7 +90,7 @@
                         <form class="row g-3 container-fluid" name="f" action="" method="post">
                             <input type="text" class="form-control" id="id_clientec" name="idcliente" value="" hidden>
                             
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-md-3 col-sm-12"> 
                                 <label for="tipo_id" class="form-label">Tipo</label>
                                 <select class="form-select" id="tipo_id" name="tipo" required>
                                     <option selected disabled value="">Selecione</option>
@@ -140,6 +140,7 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
+                    
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <h5>Contatos</h5>
                     </button>
@@ -182,7 +183,7 @@
 
             </div>
 		</main>
-		<?php include "html/rodape.php" ?>
+		<?php include "html/footer.php" ?>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>

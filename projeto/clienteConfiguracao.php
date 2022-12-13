@@ -28,7 +28,7 @@
 		<div class="row row-cols-1 row-cols-md-3 g-4">
 			<a href="edicaoCliente.php?id=<?=$id;?>">
 				<div class="col">
-					<div class="card"> 
+					<div class="card">  
 						<i class= "bi bi-person-square text-center text-sucess" style ="font-size: 10rem;"></i>';
 						<div class="card-body">
 							<h5 class="card-title text-center">Dados Pessoais</h5>
@@ -38,45 +38,26 @@
 			</a>
 			<a href="cadastroClienteComplemento.php?id=<?=$id;?>">
 				<div class="col">
-					<div class="card">
-					<?php
-						while ($cliente = $sql_query->fetch_assoc()){
-
-							if($cliente['cep'] == ""){
-								echo '<i class= "bi bi-house text-center text-danger" style ="font-size: 10rem;"></i>';
-										
-							}else{
-								echo '<i class= "bi bi-house text-center text-success" style ="font-size: 10rem;"></i>';
-								}
-						}
-					?>
-					
-						<div class="card-body">
-							<h5 class="card-title text-center">Endereço </h5>
+					<div class="card" >
+						<i class="bi bi-house text-center text-success" style="font-size: 10rem;"></i>
+							<div class="card-body">
+								<h5 class="card-title text-center">Endereço</h5>
+								
+							</div>
 						</div>
-					</div>	
-				</div>
+					</div>
 			</a>
-			<a href="edicaoCliente.php?id=<?=$id;?>">
+			
+			<a href="cadastroClienteComplemento.php?id=<?=$id;?>">
 				<div class="col">
-					<div class="card">
-					<?php
-						while ($cliente = $sql_query->fetch_assoc()){
-
-							if($cliente['tipo'] == ""){
-								echo '<i class= "bi bi-house text-center text-danger" style ="font-size: 10rem;"></i>';
-										
-							}else{
-								echo '<i class= "bi bi-house text-center text-success" style ="font-size: 10rem;"></i>';
-								}
-						}
-					?>
-					<i class= "bi bi-telephone text-center text-success" style ="font-size: 10rem;"></i>
-						<div class="card-body">
-							<h5 class="card-title text-center ">Contato </h5>
+					<div class="card" >
+						<i class="bi bi-telephone text-center text-success" style="font-size: 10rem;"></i>
+							<div class="card-body">
+								<h5 class="card-title text-center">Contatos</h5>
+								
+							</div>
 						</div>
-					</div>	
-				</div>
+					</div>
 			</a>
 			<a href="edicaoCliente.php?id=<?=$id;?>">
 				<div class="col">

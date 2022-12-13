@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <!-- T$%lpqHlBOW#^yKRLRM^ -->
 <!-- b!!(=S-l1ylO/h*~ -->
+<?php
+ 	$teste = isset($_COOKIE['cliente']) ? $_COOKIE['cliente'] : "" ;
+ 	$login = isset($_COOKIE['login']) ? $_COOKIE['login'] : "" ;
+	var_dump($login);
+?>
 <html lang="pt-br">
 
 <head>
-
 	<?php require "html/head.php" ?>
-
-
 </head>
 
 	<!--  -->
@@ -34,6 +36,22 @@
 				$prod2 = $sql_query2->fetch_assoc();
 				$lista[] = $prod2;
 			}
+		?>
+
+		<?php
+			echo "Cookie: " . $teste;
+			echo "<br>";
+			echo "Cookie: " . $login;
+			echo "<br>";
+			echo "Time(): " .time();
+			echo "<br>";
+			echo "Data e hora: " . date('d/m/y H:i:s');
+			echo "<br>";
+			echo "Data e hora: " . date('d/m/y H:i:s ', time()+3600);
+			echo "<br>";
+			echo "Cookie2 : " . $login;
+			echo "<br>";
+			var_dump($login);
 		?>
 
 		<div id="banner">
