@@ -13,9 +13,18 @@
 	<body>
 		<?php include "html/header.php";
 			require_once "src/conexao.php";
+			$buscado = isset($_GET['buscado']) ? $_GET['buscado'] : '';
 
-			$sql_code = "SELECT * FROM produtos";
+			$sql_query;
+
+			if($buscado){
+				$sql_code = "SELECT * FROM produtos WHERE descricao LIKE '%$buscado%' ORDER BY nome";
+				
+			}else{
+				$sql_code = "SELECT * FROM produtos";
+			}
 			$sql_query = $conexao->query($sql_code);
+
 
 			if (!isset($_SESSION)){
 				SESSION_START();
@@ -38,20 +47,26 @@
 
 			<h1>Produtos</h1>
 			<h3>Lista cadastrados</h3>
-			<table class="table table-striped">
-				<tr>
-					<th>ID</th>
-					<th>FOTO</th>
-					<th>NOME</th>
-					<th>TIPO</th>
-					<th>CATEGORIA</th>
-					<th>FABRICANTE</th>
-					<th>ATIVO</th>
-					<th>AÇÃO</th>
-				</tr>
-				<?php
+
+			<?php
+				if ($sql_query->num_rows >0) : ?>
+				
+			<div class="table-responsive">
+
+				<table class="table table-striped">
+					<tr>
+						<th>ID</th>
+						<th>FOTO</th>
+						<th>NOME</th>
+						<th>TIPO</th>
+						<th>CATEGORIA</th>
+						<th>FABRICANTE</th>
+						<th>ATIVO</th>
+						<th>AÇÃO</th>
+					</tr>
+					<?php
 					while ($produto = $sql_query->fetch_assoc()){
-				?>
+						?>
 				<tr>
 					<td><?= $produto['idproduto']?></td>
 					<td><img height= '50' src = " <?= $produto['foto']?>"></td>
@@ -66,13 +81,18 @@
 								$idProduto = $produto['idproduto'];
 								echo "<a href='estoque.php?id=$idProduto;'>[ESTOQUE]</a>";
 							}
-						?>
+							?>
                         <a href="mais_detalhes.php?id=<?=$produto['idproduto']; ?>">[DETALHES]</a>
 					</td>
 				</tr>
 				
-					<?php }?>
+				<?php }?>
 			</table>
+		</div>
+		<?php else :
+			echo "<h3 style='text-align: center; margin-top:50px'> O produto &quot;$buscado&quot; não foi encontrado.</h3>";
+		endif;
+		?>
 		</main>
 		
 		<?php include "html/footer.php" ?>
@@ -80,5 +100,4 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
