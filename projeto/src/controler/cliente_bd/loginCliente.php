@@ -20,7 +20,6 @@
             
             //Quantidade de linhas retornado;
             $qtd = $sql_query->num_rows; //Atributo num_rows = número de linhas
-            // die("Antes do if...");
             if($qtd == 1){
                 $cliente = $sql_query->fetch_assoc();
 
